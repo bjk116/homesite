@@ -1,0 +1,15 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block navbar %}
+<div class="tabbable">
+  <ul class="navbar nav-tabs">
+    {% for link in links %}
+      <li><a href={{"/view/"+link}}>{{ link }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

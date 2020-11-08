@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <title>Temperature</title>
+    </head>
+
+    <body>
+        <table>
+             <thead>
+                 <tr>
+                     <th>ID</th>
+                     <th>Time</th>
+                     <th>Degrees</th
+                 </tr>
+             </thead>
+             <tbody>
+                 {% for record in data %}
+                     <tr>
+                       <td>{{ record[0] }}</td>
+                       <td>{{ record[1] }}</td>
+                       <td>{{ record[2] }}</td>
+                     </tr>
+                 {% endfor %}              
+             </tbody>
+        </table>
+    </body>
+</html>

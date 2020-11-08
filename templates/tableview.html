@@ -1,0 +1,23 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+    <a href="/">Naviation</a>
+    <table>
+        <thead>
+             <tr>
+                 {% for header in headers %}
+                     <th>{{ header }}</th>
+                 {% endfor %}
+             </tr>
+         </thead>
+         <tbody>
+             {% for record in data %}
+                 <tr>
+                   {% for item in record %}
+                       <td>{{ item }}</td>
+                   {% endfor %}
+                 </tr>
+             {% endfor %}              
+         </tbody>
+    </table>
+{% endblock %}
